@@ -1,0 +1,185 @@
+{% extends 'layout.html' %}
+{% block link %}
+<!-- <link rel="apple-touch-icon" sizes="76x76" href="https://mundana.bootmb.com/assets/img/favicon.ico"> -->
+<!-- <link rel="icon" type="image/png" href="https://mundana.bootmb.com/assets/img/favicon.ico"> -->
+<!-- <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Source+Sans+Pro:400,600,700" rel="stylesheet"> -->
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"> -->
+<!-- <link href="https://mundana.bootmb.com/assets/css/main.css" rel="stylesheet"> -->
+<style>
+    .spanborder {
+        border-bottom: 1px solid #e8f3ec;
+        margin-bottom: 2rem;
+    }
+
+    .spanborder span {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.44);
+        display: inline-block;
+        padding-bottom: 20px;
+        margin-bottom: -1px;
+    }
+
+    ol.list-featured {
+        counter-reset: my-awesome-counter;
+        list-style: none;
+        padding-left: 0;
+    }
+
+    ol.list-featured li {
+        counter-increment: my-awesome-counter;
+        display: flex;
+        font-size: 0.8rem;
+    }
+
+    ol.list-featured li:before {
+        content: "" counter(my-awesome-counter);
+        font-weight: bold;
+        font-size: 3rem;
+        margin-right: 0.5rem;
+        font-family: 'Abril Fatface', serif;
+        line-height: 1;
+
+    }
+
+    .font-weight-bold {
+        font-weight: 700 !important;
+    }
+
+    .nfive:hover {
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    .nfive_2:hover {
+        text-decoration: underline;
+    }
+</style>
+{% endblock %}
+{% block content %}
+{% load static %}
+<main class="main">
+    <!-- 欢迎 -->
+    <section class="spotlight bg-cover bg-size--cover"
+        style="background-image: url('https://m1.im5i.com/2022/09/23/UFYmu3.jpg');height: 800px;">
+        <span class="mask bg-primary alpha-7"></span>
+        <div class="spotlight-holder py-sm pt-lg-lg">
+            <div class="container d-flex align-items-center">
+                <div class="container d-flex align-items-center no-padding">
+                    <div class="col">
+                        <div
+                            class="row cols-xs-space align-items-center text-center text-md-left justify-content-center">
+                            <div class="col-9">
+                                <div class="text-center mt-5">
+                                    <!-- <img src="{% static 'img/logo/logo.svg' %}" style="width: 600px; margin: -150px;"
+                                        class="img-fluid animated" data-animation-in="jackInTheBox"
+                                        data-animation-delay="1000" alt="logo"> -->
+                                    <h2 class="heading display-4 font-weight-600 text-white mt-5 animated"
+                                        data-animation-in="fadeInUp" data-animation-delay="2000"
+                                        style="padding-top:180px;font-size:80px;">
+                                        Publications<span class="font-weight-300" style="padding:0 10px"></span>
+                                    </h2>
+                                    <p class="lead text-white mt-3 lh-180 c-white animated" data-animation-in="fadeInUp"
+                                        data-animation-delay="2500" style="font-size:25px;color:transparent;">Our
+                                        research findings, patents and databases
+                                        <strong class="text-white"></strong>
+                                    <div style="height: 240px;"></div>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 主要内容 -->
+    <section class="slice slice-lg" style="margin-bottom:-100px ;">
+        <div class="container">
+            <div class="row justify-content-between">
+                <!-- 代表性论文 -->
+                <div class="col-md-8" style="padding-right:25px;text-align: justify;">
+                    <h1 class="font-weight-bold spanborder"><span>代表性论文</span></h1>
+                    {% for obj in queryset %}
+                    <!-- 论文1 -->
+                    <h2 class="mb-1 h4 font-weight-bold">
+                        <a class="text-dark" href="{{ obj.href }}">
+                            <span class="nfive">
+                                {{ obj.name }}</span>
+                        </a>
+                    </h2>
+                    <div class="mb-3 d-flex justify-content-between" style="padding-bottom:15px ;">
+
+                        <div class="pr-3">
+                            <small class="text-muted" id="author">{{ obj.autor }}</small>
+                            <p style="text-align:justify">
+                                {{ obj.abstract }}
+                            </p>
+                            <div class="card-text text-muted small">
+                                {{obj.journal}}
+                                <!-- <br> -->
+                                <!-- doi:{{obj.doi}} -->
+                            </div>
+                            <!-- <small class="text-muted">{{obj.birthday|date:"Y-m" }}</small> -->
+                        </div>
+                        <img height="120" src="{% get_static_prefix %}img/achievement/articles/{{ obj.short_name }}">
+                    </div>
+                    {% endfor %}
+                </div>
+                <!-- 研究成果 -->
+                <div class="col-md-4 pl-4">
+                    <h1 class="font-weight-bold spanborder"><span>研究成果</span></h1>
+                    <!-- 所有论文 -->
+                    <ol class="list-featured" style="height:600px;overflow-y:scroll;">
+
+                        {% for obj in queryset_all %}
+                        <li>
+                            <span>
+                                <h6 class="font-weight-bold">
+                                    <a href="{{obj.href}}" class="text-dark nfive_2">{{obj.name}}</a>
+                                </h6>
+                                <p class="text-muted">
+                                    {{obj.journal}}
+                                </p>
+                            </span>
+                        </li>
+                        {% endfor %}
+                    </ol>
+                    <!-- 数据库 -->
+                    <div style="margin-top: 58px;">
+                        <h2 class="font-weight-bold spanborder"><span>数据库</span></h2>
+                        <div class="thumbnail" style="border-radius: 15px;">
+                            <img src="{% static 'img/queshi.png' %}"
+                                style="height: 148px; width: auto; display: block;padding: 15px;"
+                                href="http://queshi.org/" />
+                            <div class="caption">
+                                <h3> <a href="http://queshi.org/">Qselected</a></h3>
+                                <p>
+                                    Innovative algorithms developed by Queshi ensure that patients receive the most
+                                    effective drug interventions in the shortest possible time.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}
+
+{% block js %}
+<script type="text/javascript" charset="utf-">
+    // $(document).ready(function () {
+    //     $("div small").each(
+    //         function () {
+    //             var value = $("div small").html();
+    //             console.log(value)
+    //             var reg = new RegExp('Cao J', 'g');// g表示全局替换
+    //             var result = value.replace(reg, '<span style="font-weight: bolder;">Cao J<span>');
+    //             $("div small").html(result);
+
+    //         }
+    //     )
+    // });
+</script>
+{% endblock %}

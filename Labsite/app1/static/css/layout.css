@@ -1,0 +1,68 @@
+/* 设置导航栏大小 */
+header{
+    height: 60px;
+    width: 100%;
+    line-height: 20px;
+    font-size: 22px;
+    background-color: rgba(25, 25, 65, 0.520);
+    line-height: 60px;
+}
+
+/* 设置导航宽度 */
+/* .wap1 {
+    width: 122px;
+    margin: 0 auto;
+} */
+
+/* 设置logo大小 */
+.header-left {
+    width: 120px;
+    height: 60px;
+    float: left;
+}
+
+/* 设置li右浮，且与logo同一行 */
+.header-right {
+    float: right;
+}
+
+/* 设置li中内容左浮 */
+.header-right li {
+    float: left;
+}
+
+/* 设置导航字体样式 */
+.header-right a {
+    color: #b0b0b0;
+}
+.header-right a:hover {
+    text-decoration:none;
+    color: rgba(44, 176, 233, 0.859);
+}
+.header-right span {
+    color: #c3c3c3;
+    margin: 0 15px;
+}
+.transp{
+    width: 80px;
+    height: 40px;
+    display: inline-block;
+
+}
+
+.footer-info {
+    height: 86px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: rgb(0, 16, 86);
+}
+
+.container2{
+    margin-top: 500px;
+    width: 1226px;
+    background-color: rgba(245, 245, 245, 0.489);
+    border-radius: 8px;
+    margin-bottom: 118px;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.565);
+}

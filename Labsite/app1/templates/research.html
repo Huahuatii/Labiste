@@ -1,0 +1,153 @@
+{% extends 'layout.html' %}
+{% block link %}
+<link rel="stylesheet" href="https://mb.bootcss.com/assets/css/libs.bundle.css">
+<link rel="stylesheet" href="https://mb.bootcss.com/assets/css/theme.bundle.css">
+<style>
+    .spanborder {
+        border-bottom: 1px solid #e8f3ec;
+        margin-bottom: 2rem;
+    }
+
+    .spanborder span {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.44);
+        display: inline-block;
+        padding-bottom: 20px;
+        margin-bottom: -1px;
+    }
+</style>
+{% endblock %}
+
+<!-- 主题内容 -->
+{% block content %}
+{% load static %}
+<main class="main">
+    <section class="spotlight bg-cover bg-size--cover"
+        style="background-image: url('https://m1.im5i.com/2022/09/23/UFYXeM.jpg');height: 800px;">
+        <span class="mask bg-primary alpha-7"></span>
+        <div class="spotlight-holder py-sm pt-lg-lg">
+            <div class="container d-flex align-items-center">
+                <div class="container d-flex align-items-center no-padding">
+                    <div class="col">
+                        <div
+                            class="row cols-xs-space align-items-center text-center text-md-left justify-content-center">
+                            <div class="col-9">
+                                <div class="text-center mt-5">
+                                    <!-- <img src="{% static 'img/logo/logo.svg' %}" style="width: 600px; margin: -150px;"
+                                        class="img-fluid animated" data-animation-in="jackInTheBox"
+                                        data-animation-delay="1000" alt="logo"> -->
+                                    <h2 class="heading display-4 font-weight-600 text-white mt-5 animated"
+                                        data-animation-in="fadeInUp" data-animation-delay="2000" style="padding-top:180px;font-size:80px;">
+                                        Research Interests<span class="font-weight-300" style="padding:0 10px"></span>
+                                    </h2>
+                                    <p class="lead text-white mt-3 lh-180 c-white animated" data-animation-in="fadeInUp"
+                                        data-animation-delay="2500"
+                                        style="font-size:25px;line-height:34px">
+                                        Involved in uncovering the molecular and cellular basis of cancer and developing new therapeutic drugs <strong class="text-white"></strong>
+                                      
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section class="py-5 bg-lighter border-top border-bottom" id="scrollToSection">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-center">
+                <a href="#" class="btn btn-danger btn-icon-only btn-zoom--hover rounded-circle">
+                    <span class="btn-inner--icon"><svg class="svg-inline--fa fa-heart fa-w-18" aria-hidden="true"
+                            data-prefix="fas" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 576 512" data-fa-i2svg="">
+                            <path fill="currentColor"
+                                d="M414.9 24C361.8 24 312 65.7 288 89.3 264 65.7 214.2 24 161.1 24 70.3 24 16 76.9 16 165.5c0 72.6 66.8 133.3 69.2 135.4l187 180.8c8.8 8.5 22.8 8.5 31.6 0l186.7-180.2c2.7-2.7 69.5-63.5 69.5-136C560 76.9 505.7 24 414.9 24z">
+                            </path>
+                        </svg></span>
+                </a>
+                <span class="heading h4 ml-3 mb-0"><strong
+                        style="color: #288cff;font-size: larger;">"点赞投币加关注"</strong>，永远更新不迷路</span>
+            </div>
+        </div>
+    </section> -->
+    <section class="slice slice-lg" style="margin-bottom: -180px;">
+        <div class="container">
+
+            <!-- 方向1 -->
+            <div class="row cols-xs-space cols-sm-space align-items-center" style="padding-bottom:118px ;">
+                <h1 class="font-weight-bold spanborder"><span>Cancer Pharmacology</span></h1>
+                <div class="col-md-5">
+                    <img src="{% static 'img/research/img1.png' %}" class="img-center img-fluid rounded">
+                </div>
+                <div class="col-md-7 col-lg-6 ml-lg-auto" style="text-align: justify;">
+                    <div class="pr-md-6">
+                        <p class="lead text-gray mt-4" style="text-align: justify;">
+                            <span style="padding-left:35px"></span>
+                            探索肿瘤新靶点并开发分子靶向抗肿瘤药物是抗肿瘤药物研发的重要方向之一，靶点特异性的抗肿瘤药物能够针对正常细胞与肿瘤细胞之间的差异，以实现高选择性、低毒性的治疗效果。本课题组着重于抗肿瘤新靶点的发现和确证研究，聚焦细胞应激的抗肿瘤药物新靶点及新分子发现研究，围绕肿瘤细胞免疫应激、缺氧应激和氧化应激，发现了包括HDAC11、WSB1、DJ-1等在内的抗肿瘤新靶点及其小分子干预化合物。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 方向2 -->
+            <div class="row cols-xs-space cols-sm-space align-items-center" style="padding-bottom:118px ;">
+                <h1 class="font-weight-bold spanborder"><span>Tumor Immunology</span></h1>
+                <div class="col-md-4 col-lg-4 ml-lg-auto" style="text-align: justify;">
+                    <div class="pr-md-6">
+                        <p class="lead text-gray mt-4" style="text-align: justify;">
+                            <span style="padding-left:35px"></span>
+                            随着对肿瘤研究的不断深入，针对肿瘤免疫微环境以及肿瘤T细胞免疫治疗的研究在近年来得到广泛关注。肿瘤T细胞免疫治疗的核心涉及肿瘤T细胞对肿瘤的识别和杀伤。本课题组关注影响肿瘤T细胞免疫过程中肿瘤表面抗原生成和肿瘤T细胞特异性识别肿瘤的关键因素，未来将聚焦于“肿瘤新抗原生成”和“肿瘤T细胞特异性识别”两个肿瘤T细胞治疗关键环节，开展调控分子机制、靶点发现和干预策略的研究。
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-7">
+                    <img src="{% static 'img/research/img3.png' %}" class="img-center img-fluid rounded z-depth-3">
+                </div>
+            </div>
+
+            <!-- 方向3 -->
+            <div class="row cols-xs-space cols-sm-space align-items-center" style="padding-bottom:118px ;">
+                <h1 class="font-weight-bold spanborder"><span>PROTAC</span></h1>
+                <div class="col-md-6">
+                    <img src="{% static 'img/research/img4.png' %}" class="img-center img-fluid rounded z-depth-3">
+                </div>
+                <div class="col-md-6 col-lg-5 ml-lg-auto" style="text-align: justify;">
+                    <div class="pr-md-6">
+                        <p class="lead text-gray mt-4" style="text-align: justify;">
+                            <span style="padding-left:35px"></span>
+                            PROTAC技术利用了细胞内自然的蛋白质降解过程，即在体内可以分别识别靶蛋白和特定E3泛素连接酶，通过一个双功能分子，将靶蛋白和E3泛素连接酶拉近，当靶蛋白被泛素化后，其在体内可进一步通过泛素-蛋白酶体途径发生降解。针对E3泛素连接酶，设计发现新型的小分子配体，用于蛋白特异性降解剂的开发，并以降解剂作为化学探针，研究致病蛋白的生物学新功能和新通路。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 方向4 -->
+            <div class="row cols-xs-space cols-sm-space align-items-center" style="padding-bottom:118px ;">
+                <h1 class="font-weight-bold spanborder">
+                    <span>AI for Pharmacology</span>
+                </h1>
+
+                <div class="col-md-12 col-lg-12 ml-lg-auto" style="text-align: justify;">
+                    <div class="pr-md-6">
+                        <p class="lead text-gray mt-4" style="text-align: justify;">
+                            <span style="padding-left:35px"></span>
+                            基于AI for
+                            science的科研理念，推动人工智能工具和传统实验工具结合促进疾病生理机制发现和生物底层理论创新，数智驱动解决临床前药物研发和临床精准医疗应用中的关键难题。目前研究方向集中于围绕临床精准用药的关键技术和问题（药物敏感性预测、药物再利用、药物合用、药物靶标发现等），采用病人个体化的多组学大数据和AI技术建立生物平台临床样本库，开发针对不同临床需求的AI预测模型和新方法，从而辅助指导临床精准用药和药物新靶标的发现。
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-8">
+                    <img src="{% static 'img/research/img2.png' %}" class="img-center img-fluid rounded z-depth-3">
+                </div>
+                <div class="col-md-2">
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

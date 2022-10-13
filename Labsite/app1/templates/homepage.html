@@ -1,0 +1,211 @@
+{% extends 'layout.html' %}
+{% block link %}
+
+<link rel="stylesheet" href="https://mb.bootcss.com/assets/css/libs.bundle.css">
+<link rel="stylesheet" href="https://mb.bootcss.com/assets/css/theme.bundle.css">
+<style>
+    .spanborder {
+        border-bottom: 1px solid #e8f3ec;
+        margin-bottom: 2rem;
+    }
+
+    .spanborder span {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.44);
+        display: inline-block;
+        padding-bottom: 20px;
+        margin-bottom: -1px;
+    }
+</style>
+{% endblock %}
+
+<!-- 主题内容 -->
+{% block content %}
+{% load static %}
+<main class="main">
+    <!-- 欢迎板块 -->
+    <section class="spotlight bg-cover bg-size--cover"
+        style="background-image: url('https://m1.im5i.com/2022/09/23/UFYITf.jpg');height: 800px;">
+        <span class="mask bg-primary alpha-7"></span>
+        <div class="spotlight-holder py-sm pt-lg-lg">
+            <div class="container d-flex align-items-center">
+                <div class="container d-flex align-items-center no-padding">
+                    <div class="col">
+                        <div
+                            class="row cols-xs-space align-items-center text-center text-md-left justify-content-center">
+                            <div class="col-8">
+                                <div class="text-center mt-7">
+                                    <img src="{% static 'img/logo/logo6.svg' %}" style="width: 600px; margin-bottom: -250px;margin-top: -100px;"
+                                        class="img-fluid animated" data-animation-in="jackInTheBox"
+                                        data-animation-delay="1000" alt="logo">
+                                    <h2 class="heading display-4 font-weight-600 text-white mt-5 animated"
+                                        data-animation-in="fadeInUp" data-animation-delay="2000" style="font-size:75px">
+                                        Welcome to<span class="font-weight-600" style="padding:0 10px">CJ Lab</span>
+                                    </h2>
+                                    <a class="text-dark" href="/research" style="text-decoration:none ;">
+                                    <p class="lead text-white mt-3 lh-180 c-white animated" data-animation-in="fadeInUp"
+                                        data-animation-delay="2500">
+                                        Cancer Pharmacology | Tumor Immunology | PROTAC | AI Pharmacology <strong class="text-white"></strong>
+                                    </p>
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ---- -->
+    <!-- 红心板块 -->
+    <!-- <section class="py-5 bg-lighter border-top border-bottom" id="scrollToSection">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-center">
+                <a href="#" class="btn btn-danger btn-icon-only btn-zoom--hover rounded-circle">
+                    <span class="btn-inner--icon"><svg class="svg-inline--fa fa-heart fa-w-18" aria-hidden="true"
+                            data-prefix="fas" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 576 512" data-fa-i2svg="">
+                            <path fill="currentColor"
+                                d="M414.9 24C361.8 24 312 65.7 288 89.3 264 65.7 214.2 24 161.1 24 70.3 24 16 76.9 16 165.5c0 72.6 66.8 133.3 69.2 135.4l187 180.8c8.8 8.5 22.8 8.5 31.6 0l186.7-180.2c2.7-2.7 69.5-63.5 69.5-136C560 76.9 505.7 24 414.9 24z">
+                            </path>
+                        </svg></span>
+                </a>
+                <span class="heading h4 ml-3 mb-0"> <strong
+                        style="color: #288cff;font-size: larger;">"点赞投币加关注"</strong>，低氧带你上高速</span>
+            </div>
+        </div>
+    </section> -->
+    <!-- ---- -->
+    <!-- 介绍我们 -->
+    <!-- 如果想要下面有杠杠的话，就加这个属性：data-delimiter="1" -->
+    <section class="slice slice-lg">
+        <div class="container">
+            <div class="row cols-xs-space cols-sm-space align-items-center">
+                <h1 class="font-weight-bold spanborder"><span>关于我们</span></h1>
+                <div class="col-md-5 col-lg-5 ml-lg-auto" style="text-align: justify;">
+                    <div class="pr-md-6">
+                        <h2 class="heading h2">
+                            <strong>CJ Lab</strong>
+                            </h3>
+                            <h5 class="heading h5" style="line-height:32px ;">
+                                ——聚焦抗肿瘤药物研发和肿瘤免疫，结合人工智能方法，CJ Lab正为人类攻克肿瘤难题贡献着力量
+                            </h5>
+                            <!-- <p class="lead text-gray mt-4" style="text-align: justify;">
+                                <span style="padding-left:35px"></span>
+                                聚焦小分子靶向药物，研究肿瘤免疫、结合人工智能方法，CJ Lab正为人类攻克肿瘤难题贡献着力量。
+                            </p> -->
+                            <p class="lead text-gray mt-4" style="text-align: justify;">
+                                <span style="padding-left:35px"></span>
+                                CJ Lab隶属于浙江大学肿瘤与内分泌药理实验室和浙江大学智能创新药物研究院，在杨波教授和何俏军教授领衔、曹戟副教授带领下，课题组培养了一批具有较强科研素质和创新潜力的硕博生，在肿瘤药理学研究领域积累了丰富的研究成果。我们将在现有工作基础上，结合人工智能等前沿技术，聚焦小分子药物（PROTAC）靶向降解关键肿瘤蛋白，并重点关注肿瘤免疫治疗癌症，我们正努力将实验室成果照进现实，服务临床。
+                            </p>
+                    </div>
+                </div>
+                <div class="col-md-1 col-lg-1 ml-lg-auto" style="text-align: justify;">
+                </div>
+                <div class="col-md-6">
+                    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1" class=""></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2" class=""></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="3" class=""></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="4" class=""></li>
+                        </ol>
+                        <div class="carousel-inner shadow-sm rounded" style="height: 360px;">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="{% static 'img/homepage_img/GroupPhoto2.jpg' %}"
+                                    alt="First slide">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <!-- <h5>Mission Beach, San Diego, United States by Matthew Hamilton</h5> -->
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="{% static 'img/homepage_img/GroupPhoto9.jpg' %}"
+                                    alt="Second slide">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <!-- <h5>Golden Gate Bridge, San Francisco, United States by Tim Foster</h5> -->
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="{% static 'img/homepage_img/GroupPhoto3.jpg' %}"
+                                    alt="Second slide">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <!-- <h5>Golden Gate Bridge, San Francisco, United States by Tim Foster</h5> -->
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="{% static 'img/homepage_img/GroupPhoto4.jpg' %}"
+                                    alt="Second slide">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <!-- <h5>Golden Gate Bridge, San Francisco, United States by Tim Foster</h5> -->
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="{% static 'img/homepage_img/GroupPhoto5.jpg' %}"
+                                    alt="Second slide">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <!-- <h5>Golden Gate Bridge, San Francisco, United States by Tim Foster</h5> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ---- -->
+    <!-- 介绍老师 -->
+    <section class="slice slice-lg">
+        <div class="container">
+            <div class="row cols-xs-space cols-sm-space align-items-center">
+                <h1 class="font-weight-bold spanborder"><span>指导老师</span></h1>
+                <div class="col-md-3">
+                    <img src="https://m1.im5i.com/2022/09/24/UFgKLv.jpg"
+                        class="img-center img-fluid rounded z-depth-3">
+                </div>
+                <div class="col-md-9 col-lg-8 ml-lg-auto" style="text-align: justify;">
+                    <div class="pr-md-6">
+                        <h3 class="heading h3">
+                            曹戟，副教授，博士生导师
+                        </h3>
+                        <h5 class="heading h5" style="line-height:32px ;">
+                            ——浙江省'万人计划'青年拔尖人才，浙江省自然科学基金杰出青年科学基金获得者
+                        </h5>
+                        <p class="lead text-gray mt-4" style="text-align: justify;">
+                            <span style="padding-left:35px"></span>
+                            毕业于浙江大学药学院，曾在美国康奈尔大学和HHMI研究所从事化学生物学研究。研究方向为肿瘤药理学，主要围绕抗肿瘤药物新靶点发现开展研究工作，发表SCI研究论文50余篇，其中以第一作者或通讯作者在Nature
+                            Communications、PNAS、Cancer Research等权威期刊发表论文20余篇，其中2篇为ESI高被引论文。参编《DJ-1/PARK7 Protein:
+                            Parkinson’s Disease, Cancer and Oxidative Stress-Induced
+                            Diseases》、《抗肿瘤药物最新研究与进展》、《新编抗肿瘤药物学》等学术专著；授权肿瘤治疗相关的国家发明专利10项；作为项目负责人主持包括国家自然科学基金面上项目、青年项目等在内科研项目8项；获教育部自然科学二等奖和浙江省自然科学奖二等奖。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ---- -->
+    <!-- 展示图片 -->
+    <section class="slice slice-lg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-6">
+                    <img src="https://m1.im5i.com/2022/09/24/UFgar3.png" alt="Image" class="rounded-lg img-fluid"
+                        style="border-radius:15px ;">
+                    <div class="text-right mt-4">
+                        <img src="https://m1.im5i.com/2022/09/24/UFgf4M.jpg" alt="Image" class="rounded-lg img-fluid w-50"
+                            style="border-radius:15px ;">
+                    </div>
+                </div>
+                <div class="col-lg-7 col-6">
+                    <img src="https://m1.im5i.com/2022/09/24/UFgytp.jpg" alt="Image" class="rounded-lg img-fluid w-75"
+                        style="border-radius:15px ;">
+                    <div class="text-right mt-4">
+                        <img src="https://m1.im5i.com/2022/09/24/UFglz7.jpg" alt="Image" class="rounded-lg img-fluid"
+                            style="border-radius:15px ;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ---- -->
+</main>
+{% endblock %}

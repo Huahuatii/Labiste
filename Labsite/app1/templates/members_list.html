@@ -1,0 +1,66 @@
+{% extends 'layout_inner.html' %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+{% endblock %}
+
+<!-- 设置背景图片 -->
+
+{% block content %}
+<!-- 主题内容 -->
+<div class="panel panel-success container" style="padding:0 0;">
+  <!-- 面板标题 -->
+  <div class="panel-heading">
+    <h3 class="panel-title">成员管理</h3>
+  </div>
+  <!-- 面板内容 -->
+  <div class="panel-body">
+    <!-- 添加成员 -->
+    <div style="margin-top: 15px;margin-bottom: 15px;">
+      <a class="btn btn-success" href="/dyyxh/members/add" target="_blank">添加成员</a>
+      <a class="btn btn-success" href="/dyyxh/members" target="_blank">返回主页</a>
+    </div>
+    <table id="example" class="table table-striped" style="padding: 10px;">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>名字</th>
+          <th>入学年份</th>
+          <th style="width:300px;">个人描述</th>
+          <th>名字简称</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for obj in queryset %}
+        <tr>
+          <th scope="row">{{ obj.id }}</th>
+          <td>{{obj.name}}</td>
+          <td>{{obj.create_time}}</td>
+          <td>{{obj.description}}</td>
+          <td>{{obj.shortname}}</td>
+          <td>
+            <a class="btn btn-primary btn-xs" href="/dyyxh/members/{{ obj.id }}/edit">编辑</a>
+            <a class="btn btn-danger btn-xs" href="/dyyxh/members/delete?nid={{ obj.id }}">删除</a>
+            <!-- <input class="btn btn-danger btn-xs btn-delete" type="button" value="删除"></input> -->
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
+<!-- 底部 -->
+</body>
+{% block script %}
+<script src=""></script>
+<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('#example').DataTable();
+  });
+</script>
+{% endblock %}
+</html>

@@ -1,0 +1,245 @@
+{% extends 'layout.html' %}
+{% block link %}
+<!-- 导入CSS文件 -->
+{% load static %}
+<style>
+    .spanborder {
+        border-bottom: 1px solid #e8f3ec;
+        margin-bottom: 2rem;
+    }
+
+    .spanborder span {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.44);
+        display: inline-block;
+        padding-bottom: 20px;
+        margin-bottom: -1px;
+    }
+</style>
+{% endblock %}
+
+<!-- 主题内容 -->
+{% block content %}
+{% load static %}
+<main class="main">
+    <section class="spotlight bg-cover bg-size--cover"
+        style="background-image: url('https://m1.im5i.com/2022/09/23/UFY4mX.jpg');height: 800px;">
+        <span class="mask bg-primary alpha-7"></span>
+        <div class="spotlight-holder py-sm pt-lg-lg">
+            <div class="container d-flex align-items-center">
+                <div class="container d-flex align-items-center no-padding">
+                    <div class="col">
+                        <div
+                            class="row cols-xs-space align-items-center text-center text-md-left justify-content-center">
+                            <div class="col-9">
+                                <div class="text-center mt-5">
+                                    <!-- <img src="{% static 'img/logo/logo.svg' %}" style="width: 600px; margin: -150px;"
+                                        class="img-fluid animated" data-animation-in="jackInTheBox"
+                                        data-animation-delay="1000" alt="logo"> -->
+                                    <h2 class="heading display-4 font-weight-600 text-white mt-5 animated"
+                                        data-animation-in="fadeInUp" data-animation-delay="2000" style="padding-top:180px;font-size:80px;">
+                                        Hi, Friends<span class="font-weight-300" style="padding:0 10px"></span>
+                                    </h2>
+                                    <p class="lead text-white mt-3 lh-180 c-white animated" data-animation-in="fadeInUp"
+                                        data-animation-delay="2500"
+                                        style="font-size:25px;">
+                                        A group of passionate young researchers <strong class="text-white"></strong>
+                                        <div style="height: 150px;"></div>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section class="py-5 bg-lighter border-top border-bottom" id="scrollToSection">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-center">
+                <a href="#" class="btn btn-danger btn-icon-only btn-zoom--hover rounded-circle">
+                    <span class="btn-inner--icon"><svg class="svg-inline--fa fa-heart fa-w-18" aria-hidden="true"
+                            data-prefix="fas" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 576 512" data-fa-i2svg="">
+                            <path fill="currentColor"
+                                d="M414.9 24C361.8 24 312 65.7 288 89.3 264 65.7 214.2 24 161.1 24 70.3 24 16 76.9 16 165.5c0 72.6 66.8 133.3 69.2 135.4l187 180.8c8.8 8.5 22.8 8.5 31.6 0l186.7-180.2c2.7-2.7 69.5-63.5 69.5-136C560 76.9 505.7 24 414.9 24z">
+                            </path>
+                        </svg></span>
+                </a>
+                <span class="heading h4 ml-3 mb-0">给个 <strong
+                        style="color: #288cff;font-size: larger;">"一键三连"</strong>不过分吧</span>
+            </div>
+        </div>
+    </section> -->
+    <!-- 介绍C哥 -->
+    <!-- 需要横线就加
+    data-delimiter="1" -->
+    <section class="slice slice-lg" style="padding-bottom:158px ;">
+        <div class="container">
+            <h1 class="font-weight-bold spanborder" style="padding-left: 20px;"><span>指导老师</span></h1>
+            <div class="row cols-xs-space cols-sm-space align-items-center">
+                <div class="col-md-3">
+                    <img src="https://m1.im5i.com/2022/09/24/UFgKLv.jpg"
+                        class="img-center img-fluid rounded z-depth-3">
+                </div>
+                <div class="col-md-9 col-lg-8 ml-lg-auto" style="text-align: justify;">
+                    <div class="pr-md-6">
+                        <h3 class="heading h3">
+                            曹戟，副教授，博士生导师
+                        </h3>
+                        <h5 class="heading h5">
+                            ——浙江省'万人计划'青年拔尖人才，浙江省自然科学基金杰出青年科学基金获得者。
+                        </h5>
+                        <p class="lead text-gray mt-4" style="text-align: justify;">
+                            <span style="padding-left:35px"></span>
+                            毕业于浙江大学药学院，曾在美国康奈尔大学和HHMI研究所从事化学生物学研究。研究方向为肿瘤药理学，主要围绕抗肿瘤药物新靶点发现开展研究工作，发表SCI研究论文50余篇，其中以第一作者或通讯作者在Nature
+                            Communications、PNAS、Cancer Research等权威期刊发表论文20余篇，其中2篇为ESI高被引论文。参编《DJ-1/PARK7 Protein:
+                            Parkinson’s Disease, Cancer and Oxidative Stress-Induced
+                            Diseases》、《抗肿瘤药物最新研究与进展》、《新编抗肿瘤药物学》等学术专著；授权肿瘤治疗相关的国家发明专利10项；作为项目负责人主持包括国家自然科学基金面上项目、青年项目等在内科研项目8项；获教育部自然科学二等奖和浙江省自然科学奖二等奖。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 介绍我们 -->
+    <section class="slice slice-lg card-body px-10 py-10">
+        <!-- 博士后 -->
+        <div class="container text-center text-lg-left" style="padding-bottom:158px ;">
+            <!-- <div class="row">
+                <div class="col-lg-6 col-md-10">
+                    <h2 class="badge badge-success badge-pill" style="font-size:20px;background-color: rgba(136, 73, 11, 0.834);padding-top:10px ;padding-bottom:10px">博士后</h2>
+                    <h5 class="h5 lh-180 mt-4 mb-6"></h5>
+                </div>
+            </div> -->
+            <h3 class="font-weight-bold spanborder" style="padding-left: 20px;"><span>在站博士后（协助指导）</span></h3>
+            <div class="row">
+                {% for bsh in queryset_bsh %}
+                <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0" style="padding-bottom:88px">
+                    <div data-animate-hover="2">
+                        <div class="animate-this">
+                            <a>
+                                <img alt="{{ bsh.shortname }}" class="img-fluid rounded shadow"
+                                    src="{% get_static_prefix %}img/members/photos/{{ bsh.shortname }}.jpg">
+                            </a>
+                        </div>
+                        <div class="mt-4">
+                            <h5 class="h6 mb-0">{{ bsh.name }}</h5>
+                            <p class="text-muted text-sm mb-0">{{ bsh.email }}</p>
+                            <p class="text-muted text-sm mb-0">{{ bsh.description }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <!-- 在读学生 -->
+        <div class="container text-center text-lg-left" style="padding-bottom:158px ;">
+            <h3 class="font-weight-bold spanborder" style="padding-left: 20px;"><span>在读研究生</span></h3>
+            <div class="row" style="height: 600px;overflow-y:scroll;">
+                {% for obj in queryset %}
+                <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0" style="padding-bottom:88px">
+                    <div data-animate-hover="2">
+                        <div class="animate-this">
+                            <a>
+                                <img alt="{{ obj.shortname }}" class="img-fluid rounded shadow"
+                                    src="{% get_static_prefix %}img/members/photos/{{ obj.shortname }}.jpg">
+                            </a>
+                        </div>
+                        <div class="mt-3">
+                            <h5 class="h6 mb-0">{{ obj.name }}</h5>
+                            <!-- <p class="text-muted text-sm mb-0">{{obj.get_grade_display}}</p> -->
+                            <p class="text-muted text-sm mb-0">{{obj.y_id}}</p>
+                            <p class="text-muted text-sm mb-0">{{ obj.email }}</p>
+                            <p class="text-muted text-sm mb-0">{{ obj.description }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <!-- 毕业生 -->
+        <div class="container text-center text-lg-left" style="margin-top:98px ;">
+            <h3 class="font-weight-bold spanborder" style="padding-left: 20px;"><span>毕业生</span></h3>
+            <div class="row" style="height:600px;overflow-y:scroll;">
+                {% for bys in queryset_bys %}
+                <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0" style="padding-bottom:88px">
+                    <div data-animate-hover="2">
+                        <div class="animate-this">
+                            <a>
+                                <img alt="{{ bys.shortname }}" class="img-fluid rounded shadow"
+                                    src="{% get_static_prefix %}img/members/photos/{{ bys.shortname }}.jpg">
+                            </a>
+                        </div>
+                        <div class="mt-3">
+                            <h5 class="h6 mb-0">{{ bys.name }}</h5>
+                            <p class="text-muted text-sm mb-0">{{ bys.email }}</p>
+                            <p class="text-muted text-sm mb-0">{{ bys.description }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!-- 旧版页面 -->
+    <!-- <div class="container" style="margin-bottom: 50px;margin-top: 50px;">
+        <div class="bs-example" data-example-id="media-alignment">
+            {% for obj in queryset %}
+            <div class="media container" style="
+            width: 85%;
+            height: 95px;
+            background-color: rgba(223, 220, 240, 0.647);
+            margin-top: 100px;
+            margin-left: 50px;
+            border-radius: 100px;
+          ">
+                <div style="border-radius: 100px;">
+                    <div class="media-left media-middle">
+                        <a href="#">
+                            <img class="media-object" src="{% get_static_prefix %}img/members/photos/{{ obj.shortname }}.jpg"
+                                alt="{{ obj.shortname }}" style="
+                                        width: 160px;
+                                        height: 160px;
+                                        border-radius: 100px;
+                                        margin-left: 10px;
+                                        margin-top: -54px;
+                                        position: absolute;
+                                        border:5px solid rgba(0, 92, 177, 0.6);
+                                        box-shadow: 0 0 5px rgb(0, 91, 144);
+                        " />
+                        </a>
+                    </div>
+                </div>
+                <div class="media-body">
+                    <h2 class="media-heading" style="padding-top: 15px; padding-left: 200px;font-family: Kaiti;">
+    
+    
+                        <span class="glyphicon glyphicon-education" aria-hidden="true"></span>
+                        
+                        {{ obj.name }}
+    
+    
+                        <span class="glyphicon glyphicon-fire" aria-hidden="true" style="padding-left: 35px;"></span>
+                        
+                        <span style="font-family:'Courier New', Courier, monospace;font-size: medium;">{{ obj.Codename }}</span>
+    
+    
+                        <span class="glyphicon glyphicon-envelope" aria-hidden="true" style="padding-left: 35px;"></span>
+                        <span style="font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: medium;">联系方式：{{ obj.email }}</span>
+                    </h2>
+                    <p style="padding-left: 200px;padding-top: 5px;font-family: Kaiti;">{{ obj.description}}</p>
+                </div>
+            </div>
+            {% endfor %}
+            <!-- <nav aria-label="...">
+                <ul class="pagination">
+                    {{ page_string }}
+                </ul>
+            </nav> -->
+    </div>
+    </div> 
+</main>
+{% endblock %}
+
+{% block js %}
+{% endblock %}

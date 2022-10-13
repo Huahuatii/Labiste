@@ -1,0 +1,11 @@
+.men{
+    padding: 5 auto;
+    text-align: center;
+    margin: 25px 55px;
+}
+.mem-info{
+    width: 800px;
+    height: 150px;
+    background-color: rgb(78, 117, 156);
+    border-radius: 100px;
+}

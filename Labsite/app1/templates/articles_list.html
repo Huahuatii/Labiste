@@ -1,0 +1,75 @@
+{% extends 'layout_inner.html' %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+{% endblock %}
+
+<!-- 设置背景图片 -->
+
+{% block content %}
+<!-- 主题内容 -->
+<div class="panel panel-success container" style="padding:0 0;">
+  <!-- 面板标题 -->
+  <div class="panel-heading">
+    <h3 class="panel-title">文献管理</h3>
+  </div>
+  <!-- 面板内容 -->
+  <div class="panel-body">
+    <!-- 添加成员 -->
+    <div style="margin-top: 15px;margin-bottom: 15px;">
+      <a class="btn btn-success" href="/articles/add" target="_blank">添加文献</a>
+      <a class="btn btn-success" href="/achievement" target="_blank">返回主页</a>
+    </div>
+    <table id="example" class="table table-striped">
+      <thead>
+        <tr>
+            <th>ID</th>
+            <th>文献类型</th>
+            <th style="width:438px;">文献标题</th>
+            <!-- <th>摘要</th> -->
+            <!-- <th>作者</th> -->
+          <th style="width: 288px;">期刊</th>
+          <th >发布时间</th>
+          <!-- <th>文献链接</th> -->
+          <th>操作</th>
+        </tr>   
+      </thead>
+      <tbody>
+        {% for obj in queryset %}
+        <tr>
+          <th scope="row">{{obj.id}}</th>
+          <td>{{obj.get_cat_class_display}}</td>
+          <td style="width:438px;  display: inline-block;
+          white-space: nowrap; 
+          overflow: hidden;
+          text-overflow:ellipsis;">{{obj.name}}</td>
+          <!-- <td>{{obj.abstract}}</td> -->
+          <!-- <td>{{obj.autor}}</td> -->
+          <td>{{obj.journal}}</td>
+          <td>{{obj.birthday|date:"Y-m-d"}}</td>
+          <!-- <td>{{obj.href}}</td> -->
+          <td>
+            <a class="btn btn-primary btn-xs" href="/achievement/{{ obj.id }}/edit">编辑</a>
+            <a class="btn btn-danger btn-xs" href="/achievement/delete?nid={{ obj.id }}">删除</a>
+            <!-- <input class="btn btn-danger btn-xs btn-delete" type="button" value="删除"></input> -->
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
+<!-- 底部 -->
+</body>
+{% block script %}
+<script src=""></script>
+<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('#example').DataTable();
+  });
+</script>
+{% endblock %}
+</html>
