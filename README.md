@@ -1,4 +1,4 @@
-# Labiste
+# Labsite
 
 this is our labsite structure.  
 .  
